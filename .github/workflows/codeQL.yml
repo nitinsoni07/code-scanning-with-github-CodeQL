@@ -15,16 +15,16 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v1
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
+        uses: github/codeql-action/init@v1
         with:
           languages: javascript # Replace with your actual language, or set up a matrix
           config-file: .github/codeql/codeql-config.yml
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
+        uses: github/codeql-action/analyze@v1
       # Replaced deprecated @v1 actions with modern @v3 and @v4 versions
       # Fixed YAML indentation under the "with:" block
       # Removed the broken matrix variable or defined a hardcoded language
